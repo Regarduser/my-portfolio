@@ -1,3 +1,3 @@
-# cricket4u.github.io
+# my portfolio 
 my new website
-https://regarduser.github.io/crick4u.github.io/
+https://regarduser.github.io/my-portfolio/
