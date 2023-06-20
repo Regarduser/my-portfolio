@@ -1,132 +1,99 @@
-
-
-html{ scroll-behavior: smooth; }
-		
-*{ margin: 0; padding:0; box-sizing: border-box;font-family: 'Muli', sans-serif; }
-
-.row{ margin: 0!important; }
-
-.nav_style{ background-color: #757299!important;  }
-
-.nav_style a{ color: white; }
-
-.main_header{  height: 450px; 
-	/*background-color: green; */
-   /*box-shadow: 0 8px 6px -6px black;*/
-
-}
-
-
-.rightside h1{ font-size: 3rem; }
-
-.eksath_anime img{ animation: heartbeat 5s linear infinite}
-
-@keyframes heartbeat
-{
-  0%
-  {
-    transform: scale( .75 );
-  }
-  20%
-  {
-    transform: scale( 1 );
-  }
-  40%
-  {
-    transform: scale( .75 );
-  }
-  60%
-  {
-    transform: scale( 1 );
-  }
-  80%
-  {
-    transform: scale( .75 );
-  }
-  100%
-  {
-    transform: scale( .75 );
-  }
-}
-
-
-.cricket-ball-png-28881_anime img{ animation: coranaround 3s linear infinite}
-
-@keyframes coranaround{ 
-	0% { transform: rotate(0); }
-	100% { transform: rotate(360deg); }
- }
-
-
-
-/****************** project work ****************/
-.Cricket_Live{
-  size: 100px;
-	margin: 0 0 100px 0;
-	/*background-color:wheat;*/
-}
-
-.Cricket_Live h3{ color: #e92f2f; size: 50px; }
-
-.Cricket_update h1{
-	font-size: 2rem;
-	text-align: center;
-}
-
-
-/*********************** project works end ************/
-
-/******************* about css **************/
-
-.sub_section{ 
-	background-color: #757299;
-  color: white;
-  text-align: justify;
-  font-size: 20px;
-	/*padding: 50px 0;*/
- }
-
-/************* footer *******************/
-
-.footer_style{
-	 background-color: #a29bfe!important;  
-}
-
-.footer_style p {
-	margin-bottom: 0!important;
-}
-
-/***************** top scroll **************/
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 30px; /* Place the button at the bottom of the page */
-  right: 40px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #0a1fbd; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-}
-
-#myBtn:hover {
-  background:  #606060 ; /* Add a dark-grey background on hover */
-}
-
-
-
-/***************** responsive css *****************/
-
-@media(max-width: 780px)
-{ .main_header{ height: 700px; text-align: center; }
-
-	.main_header h1{     
-	text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&display=swap');
+*{
+    margin: 0;
     padding: 0;
-    width: 100%;
-    font-size: 30px; }
+    box-sizing: border-box;
 }
 
+body{
+    font-family:'Bodoni Moda', serif;
+    font-size: 1.2rem;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to right, #041308, #0b3317);
+}
+
+.left-text{
+    flex-basis: 30%;
+}
+
+.gallery{
+    flex-basis: 50% ;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: 120px;
+    gap: 8px;
+}
+
+.heading{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.sub-heading{
+    color: #ddd;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.box{
+    background-size: cover;
+    background-position: top;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+}
+
+.box:hover{
+    background-color: #999;
+    background-position: center;
+    box-shadow: 0 0 4px #fff;
+    cursor: pointer;
+}
+
+.row-2{
+    grid-row: span 2;
+}
+
+.column-2{
+    grid-column: span 2;
+}
+
+.row-3{
+    grid-row: span 3;
+}
+
+@media (width <=600px){
+    .container{
+        min-width: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .left-text{
+        flex-direction: column;
+    }
+
+    .gallery{
+        flex-basis: 50% ;
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-auto-columns: 200px;
+        gap: 8px;
+    }
+}
